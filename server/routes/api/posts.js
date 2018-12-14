@@ -3,6 +3,9 @@ const mongodb = require("mongodb");
 
 const router = express.Router();
 
+const db = 'mongodb://admin:admin123@ds129914.mlab.com:29914/vueexpress' || 'mongodb://localhost:27017/vueexpress'
+
+
 // Get Posts
 router.get('/', async  (req, res) => {
     const posts = await loadPostsCollection();
@@ -26,7 +29,7 @@ router.delete('/:id', async (req, res) => {
 
 async function loadPostsCollection() {
     const client = await mongodb.MongoClient.connect
-    ('mongodb://localhost:27017/vueexpress', {
+    (db, {
         useNewUrlParser: true
     });
 //('mongodb://admin:admin123@ds129914.mlab.com:29914/vueexpress', {
