@@ -5,7 +5,7 @@ const router = express.Router();
 
 // const db = 'mongodb://admin:admin123@ds129914.mlab.com:29914/vueexpress' || 'mongodb://localhost:27017/vueexpress'
 process.env.NODE_ENV === 'production' ? 
-    db = 'mongodb://dev:dev172.30.254.175:27017/sampledb'
+    db = 'mongodb://dev:dev@172.30.254.175:27017/sampledb'
     : db = 'mongodb://admin:admin123@ds129914.mlab.com:29914/vueexpress';
 
 // Get Posts
